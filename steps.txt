@@ -1,0 +1,27 @@
+Welcome!
+
+Assumptions - 
+node installed
+npm installed
+angular cli installed (npm install -g @angular/cli) 
+
+Steps to create a shared component -
+
+ng new AngularProject (y to add routing) (Enter to chose normal CSS) (might take a while, can ctrl-c if taking too long)
+
+cd AngularProject
+
+ng g module shared
+
+ng g c shared/components/shared-button --module shared/shared.module.ts --export --skip-tests --inline-style
+
+import shared module into your app.module.ts
+
+import { SharedModule } from './shared/shared.module';
+imports: [
+    SharedModule
+  ],
+
+import your shared module into your app.component.html using its selector! -
+
+ng serve --open
